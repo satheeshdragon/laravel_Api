@@ -41,6 +41,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 	});
 
 
+	Route::get('login/google', 'Auth\GoogleController@redirectToProvider');
+	Route::get('login/google/callback', 'Auth\GoogleController@handleProviderCallback');
+
+
 //   Route::group(['middleware' => 'auth:api'], function(){
 // Route::post('user_detail', 'API\AuthController@user_detail');
 // });

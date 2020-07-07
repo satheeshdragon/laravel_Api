@@ -66,6 +66,11 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+
+        <a href="{{ url('/auth/create/google') }}" class="btn btn-primary"><i class="fa fa-google"></i> Google Reg</a>
+</div>
+</div>
+
                             </div>
                         </div>
                     </form>

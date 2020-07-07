@@ -22,3 +22,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('coronas', 'CoronaController');
+
+
+Route::get('auth/google', 'GoogleController@redirectToProvider')->name('google.login');
+Route::get('auth/google/callback', 'GoogleController@handleProviderCallback');
+
+
+// Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
+// Route::get('/auth/create/{provider}', 'SocialController@callback');
